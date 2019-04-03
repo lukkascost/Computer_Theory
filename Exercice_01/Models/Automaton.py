@@ -56,9 +56,6 @@ class AutomatonFD(object):
         else:
             return "REJEITA", actual
 
-
-
-
     def __str__(self):
         result = ""
         result += "States: \n"
