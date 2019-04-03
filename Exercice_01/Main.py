@@ -22,7 +22,7 @@ Nesta etapa é necessario informar os estados possiveis em sequencia  como no ex
     Ex: automaton.insert_states("q0", "q1")
 """
 automaton.insert_states("q0", "q1")
-automaton.set_initial_state("q0") ## Setando estado inicial
+automaton.set_initial_state("q0")  ## Setando estado inicial
 
 """
 Nesta etapa é necessario informar os estados finais em sequencia como no exemplo abaixo:
@@ -30,13 +30,11 @@ Nesta etapa é necessario informar os estados finais em sequencia como no exempl
 """
 automaton.set_final_states("q1")
 
+automaton.insert_transitions()  ## Nesta etapa será necessario informar todas as transiçoes do automato.
 
-automaton.insert_transitions() ## Nesta etapa será necessario informar todas as transiçoes do automato.
+print(automaton)  ## Visualizaçao do automato
 
-
-print(automaton) ## Visualizaçao do automato
-
-while(True):
+while (True):
     word = input("digite uma sequencia com simbolos validos a ser testada: ")
     result = automaton.process(word)
     print("Palavra: ", word, result[0], "no estado", result[1].name)
